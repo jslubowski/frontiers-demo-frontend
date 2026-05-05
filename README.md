@@ -1,5 +1,7 @@
 # Frontiers Demo — Frontend
 
+[![GitHub](https://img.shields.io/badge/GitHub-frontiers--demo--frontend-blue?logo=github)](https://github.com/jslubowski/frontiers-demo-frontend)
+
 Vue 3 + PrimeVue frontend for the Frontiers Demo API. Allows registering researchers, browsing them, and managing reviewer invitations.
 
 ## Prerequisites
