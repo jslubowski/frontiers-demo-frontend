@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s -o - -w \"\\\\n---HTTP_CODE:%{http_code}\\\\n\" http://localhost:5090/scalar)",
+      "Bash(curl -s -w \"\\\\n---HTTP_CODE:%{http_code}\\\\n\" http://localhost:5090/openapi/v1.json)",
+      "Bash(curl -s -w \"\\\\n---HTTP_CODE:%{http_code}\\\\n\" http://localhost:5090/swagger/v1/swagger.json)",
+      "Bash(curl -s http://localhost:5090/openapi/v1.json -o D:\\\\wszystko\\\\projekty\\\\frontiers-demo-frontend\\\\.openapi-snapshot.json)",
+      "Bash(powershell -Command \"\\(Get-Item D:\\\\wszystko\\\\projekty\\\\frontiers-demo-frontend\\\\.openapi-snapshot.json\\).Length\")",
+      "Bash(curl -s http://localhost:5090/openapi/v1.json)",
+      "Bash(python -m json.tool)",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',c=>s+=c\\);process.stdin.on\\('end',\\(\\)=>{const d=JSON.parse\\(s\\);console.log\\('PATHS:'\\);for\\(const [p,methods] of Object.entries\\(d.paths||{}\\)\\){for\\(const m of Object.keys\\(methods\\)\\){const op=methods[m];console.log\\(' ',m.toUpperCase\\(\\),p,'-',op.summary||op.operationId||''\\);}}console.log\\('\\\\\\\\nSCHEMAS:'\\);for\\(const k of Object.keys\\(d.components?.schemas||{}\\)\\){console.log\\(' ',k\\);}}\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',c=>s+=c\\);process.stdin.on\\('end',\\(\\)=>{const d=JSON.parse\\(s\\);console.log\\(JSON.stringify\\(d.paths,null,2\\)\\);}\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',c=>s+=c\\);process.stdin.on\\('end',\\(\\)=>{const d=JSON.parse\\(s\\);console.log\\(JSON.stringify\\(d.components,null,2\\)\\);}\\)\")",
+      "Bash(curl -s -w \"\\\\n---HTTP_CODE:%{http_code}\\\\n\" http://localhost:5090/users)",
+      "Bash(curl -s -w \"\\\\n---HTTP_CODE:%{http_code}\\\\n\" http://localhost:5090/reviewers/invitations)",
+      "Bash(curl -s -w \"\\\\n---HTTP_CODE:%{http_code}\\\\n\" http://localhost:5090/users/1)",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(npx vite *)",
+      "Bash(curl -s -i -X OPTIONS http://localhost:5090/users -H \"Origin: http://localhost:5173\" -H \"Access-Control-Request-Method: POST\" -H \"Access-Control-Request-Headers: content-type\")",
+      "Bash(curl -s -i http://localhost:5090/users -H \"Origin: http://localhost:5173\")",
+      "Bash(curl -s -o /dev/null -w \"dev:%{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s -X POST http://localhost:5090/users -H \"Content-Type: application/json\" -d '{\"userName\":\"Smoke User\",\"universityName\":\"Warsaw University of Technology\",\"numberOfPublications\":3}' -w \" \\(POST /users: %{http_code}\\)\\\\n\")",
+      "Bash(curl -s http://localhost:5090/users)",
+      "Bash(curl -s -X POST http://localhost:5090/users -H \"Content-Type: application/json\" -d '{\"userName\":\"Eligible Researcher\",\"universityName\":\"University of Cambridge\",\"numberOfPublications\":12}' -w \" \\(POST /users: %{http_code}\\)\\\\n\")",
+      "Bash(curl *)",
+      "PowerShell(Get-NetTCPConnection *)"
+    ]
+  }
+}

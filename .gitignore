@@ -1,39 +1,48 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Environment files — only .env.development is committed (localhost defaults, no secrets)
+.env.local
+.env.*.local
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
+# Runtime / cache
+.cache/
+*.timestamp-*.mjs
+*.tsbuildinfo
 
-# Editor directories and files
+# Test artifacts
+coverage/
+__screenshots__/
+/cypress/videos/
+/cypress/screenshots/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor — keep shared extension recommendations, ignore personal/machine config
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-*.tsbuildinfo
-
-.eslintcache
-
-# Cypress
-/cypress/videos/
-/cypress/screenshots/
-
-# Vitest
-__screenshots__/
-
-# Vite
-*.timestamp-*-*.mjs
+# Misc
+*.orig
+*.local
